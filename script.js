@@ -3,11 +3,21 @@ const btn = document.querySelector('button');
 const container = document.querySelector('.container');
 const filter_btn = document.querySelectorAll('.filter-btn')
 const search = document.querySelector('.search');
+let errorrr =document.createElement('h1');
+errorrr.className='errormsg'
+errorrr.textContent='no task found'    
+container.append(errorrr)
+errorrr.style.display='none';
+    
+
 
 
 search.addEventListener('input',()=>{
     const task =document.querySelectorAll('.task');
     const value =search.value.toLowerCase();
+    
+         
+
     task.forEach((tasks)=>{
          const text = tasks.querySelector('h2').textContent.toLowerCase();
     if(text.includes(value)){
@@ -15,12 +25,20 @@ search.addEventListener('input',()=>{
             tasks.style.display='none'
         }
         else{
+              errorrr.style.display='none'
             tasks.style.display='flex'
         }
         
     }   
+  
     else{
+
+         
+         errorrr.style.display='block';
         tasks.style.display='none';
+        
+           
+        
     }
     })
 

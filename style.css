@@ -140,6 +140,11 @@
     justify-content: center;
     gap: 10px;
 }
+.errormsg{
+     color: #6f6e6e;
+     text-transform: capitalize;
+     font-size: 2vw 2vh;
+}
 .filter-btn{
     padding: 5px 8px;
     font-family: 'Times New Roman', Times, serif;
